@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Coffee house</title>
+	<link rel="stylesheet" href="store.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="order__form">
+		<div class="user">
+			<input type="text" name="first__name" placeholder="Введите Фамилию">
+			<input type="text" name="second__name" placeholder="Введите Имя">
+		</div>
+		<ul class="coffee__ul">
+			<li class="coffee__li">
+				<span class="coffee__li__left">
+					<input type="checkbox" id="coffeeChoice1" name="coffee" data-price="80">
+					<label for="coffeeChoice1">Эспрессо 80р.</label>
+				</span>
+				<input type="text" class="count" value="0">
+			</li>
+			<li class="coffee__li">
+				<span class="coffee__li__left">
+					<input type="checkbox" id="coffeeChoice2" name="coffee" data-price="110">
+					<label for="coffeeChoice2">Латте 110р.</label>
+				</span>
+				<input type="text" class="count" value="0">
+			</li>
+			<li class="coffee__li">
+				<span class="coffee__li__left">
+					<input type="checkbox" id="coffeeChoice3" name="coffee" data-price="120">
+					<label for="coffeeChoice3">Капучино 120р.</label>
+				</span>
+				<input type="text" class="count" value="0">
+			</li>
+			<li class="coffee__li">
+				<span class="coffee__li__left">
+					<input type="checkbox" id="coffeeChoice4" name="coffee" data-price="90">
+					<label for="coffeeChoice4">Американо 90р.</label>
+				</span>
+				<input type="text" class="count" value="0">
+			</li>
+			<li class="coffee__li">
+				<span class="coffee__li__left">
+					<input type="checkbox" id="coffeeChoice5" name="coffee" data-price="80">
+					<label for="coffeeChoice5">Шоколадный кекс 80р.</label>
+				</span>
+				<input type="text" class="count" value="0">
+			</li>
+			<li class="coffee__li">
+				<span class="coffee__li__left">
+					<input type="checkbox" id="coffeeChoice6" name="coffee" data-price="90">
+					<label for="coffeeChoice6">Черничный кекс 90р.</label>
+				</span>
+				<input type="text" class="count" value="0">
+			</li>
+			<li class="coffee__li">
+				<span class="coffee__li__left">
+					<input type="checkbox" id="coffeeChoice7" name="coffee" data-price="100">
+					<label for="coffeeChoice7">Яблочный тарт 100р.</label>
+				</span>
+				<input type="text" class="count" value="0">
+			</li>
+		</ul>
+		<div class="amount">
+			Итого: <span class="amountResult">0</span> р.
+		</div>
+		<button class="place__an__order">Оформить заказ</button>
+	</div>
+	<script src="store.js"></script>
+</body>
+</html>
