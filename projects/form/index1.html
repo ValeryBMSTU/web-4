@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input{
+            margin-left: 10px;
+        }
+        .name{
+            margin-left: 43px;
+        }
+    </style>
+    <title>Inputter</title>
+</head>
+<body>
+    <p>Имя:<input class="input name" type="text" name="myname"></p>
+
+    <p>Фамилия:<input class="input" type="text" name="mysurname" ></p>
+    
+    <p><button class="btn">Отправить</button></p>
+    
+    <span class="result">Ответ:</span>
+
+    <script>
+        let btnElement = document.querySelector(".btn");
+        let  myNameElement = document.querySelector('[name="myname"]');
+        let mySurnameElement = document.querySelector('[name="mysurname"]');
+        let resultElement = document.querySelector(".result");
+            btnElement.addEventListener("click", function() {
+                resultElement.textContent =`Здравствуйте, ${myNameElement.value} ${mySurnameElement.value}!`;
+            });
+    </script>
+</body>
+</html>

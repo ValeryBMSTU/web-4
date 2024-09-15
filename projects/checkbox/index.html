@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<body>
+<div>
+    <p> 
+        Выберите товары: 
+    </p>
+    <div>
+    <input type="checkbox" id="Choice1" name="choice" value="120">
+    <label for="Choice1">Пирог с яблоком - 120р</label>
+    </div>
+    <div>
+    <input type="checkbox" id="Choice2" name="choice" value="80">
+    <label for="Choice2">Шоколадный кекс - 80р</label>
+    </div>
+    <div>
+    <input type="checkbox" id="Choice3" name="choice" value="180">
+    <label for="Choice3">Чизкейк - 180р</label>
+    </div> 
+    <button class="btn">Выбрать</button>
+    <p>Общая стоимость: <span class="result">0 руб</span></p>
+    <script>
+        btnElement = document.querySelector(".btn"); 
+        resultElement = document.querySelector(".result"); 
+        checkboxButtons = document.querySelectorAll('[name="choice"]'); 
+
+btnElement.addEventListener("click", function(){  
+    let Total = 0;                 
+    for (const checkboxButton of checkboxButtons){      
+        if(checkboxButton.checked){                  
+            Total += parseInt(checkboxButton.value);
+        }
+    }
+    resultElement.innerHTML = `${Total} рублей`;
+});
+    </script>
+</body>
+</html>
