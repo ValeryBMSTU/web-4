@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчет стоимости товаров</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .products {
+            text-align: left;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Выбор товаров</h1>
+        <form class="products">
+            <label><input type="checkbox" name="product" value="100"> Товар 1 (100 рублей)</label><br>
+            <label><input type="checkbox" name="product" value="200"> Товар 2 (200 рублей)</label><br>
+            <label><input type="checkbox" name="product" value="300"> Товар 3 (300 рублей)</label><br>
+        </form>
+        <button onclick="calculateTotal()">Выбрать</button>
+        <div class="result" id="totalCost">Общая стоимость: 0 рублей</div>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            const checkboxes = document.querySelectorAll('input[name="product"]:checked');
+            let total = 0;
+
+            checkboxes.forEach(checkbox => {
+                total += parseInt(checkbox.value);
+            });
+
+            document.getElementById('totalCost').innerText = `Общая стоимость: ${total} рублей`;
+        }
+    </script>
+</body>
+</html>

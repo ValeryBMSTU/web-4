@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приветствие</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        #greeting {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Форма приветствия</h1>
+        <input type="text" id="firstName" placeholder="Имя">
+        <input type="text" id="lastName" placeholder="Фамилия">
+        <button onclick="showGreeting()">Отправить</button>
+        <div id="greeting"></div>
+    </div>
+
+    <script>
+        function showGreeting() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+
+            if (firstName && lastName) {
+                document.getElementById('greeting').innerText = `Здравствуйте, ${firstName} ${lastName}!`;
+            } else {
+                document.getElementById('greeting').innerText = '';
+            }
+        }
+    </script>
+</body>
+</html>
