@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .field {
+            margin-bottom: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .result span {
+            font-weight: bold;
+        }
+        .buttons {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        **Оформление заказа**
+        
+        <div class="field">
+            <label for="lastName">Фамилия:</label>
+            <input type="text" id="lastName">
+        </div>
+        <div class="field">
+            <label for="firstName">Имя:</label>
+            <input type="text" id="firstName">
+        </div>
+
+        **Выберите товары и укажите количество:**
+        
+        <div class="field">
+            <label><input type="checkbox" name="product" value="100" data-id="p1"> Кофе (100 рублей)</label>
+            <input type="number" id="p1" value="0" min="0">
+        </div>
+        <div class="field">
+            <label><input type="checkbox" name="product" value="150" data-id="p2"> Чай (150 рублей)</label>
+            <input type="number" id="p2" value="0" min="0">
+        </div>
+        <div class="field">
+            <label><input type="checkbox" name="product" value="200" data-id="p3"> Круассан (200 рублей)</label>
+            <input type="number" id="p3" value="0" min="0">
+        </div>
+
+        **Итого: <span id="totalCost">0</span> рублей**
+
+        <div class="buttons">
+            <button onclick="submitOrder()">Оформить заказ</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', updateTotal);
+        });
+
+        document.querySelectorAll('input[type="number"]').forEach(numberInput => {
+            numberInput.addEventListener('input', updateTotal);
+        });
+
+        function updateTotal() {
+            let total = 0;
+
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+                const productId = checkbox.getAttribute('data-id');
+                const quantityInput = document.getElementById(productId);
+                const quantity = parseInt(quantityInput.value) || 0;
+
+                if (quantity > 0) {
+                    total += parseInt(checkbox.value) * quantity;
+                }
+            });
+
+            document.getElementById('totalCost').innerText = total;
+        }
+
+        function submitOrder() {
+            const lastName = document.getElementById('lastName').value || "";
+            const firstName = document.getElementById('firstName').value || "";
+            const total = document.getElementById('totalCost').innerText || "0";
+
+            alert(`Заказчик: ${lastName} ${firstName}\nИтого: ${total} рублей`);
+        }
+    </script>
+</body>
+</html>
