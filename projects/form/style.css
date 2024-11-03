@@ -1,0 +1,35 @@
+body {
+    background-color:  #181513;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: azure;
+}
+
+#form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: fit-content;
+}
+
+#fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    display: flex;
+
+}
+
+.field * {
+    position: relative;
+    width: 50%;
+}
+
+#send {
+    align-self: center;
+}

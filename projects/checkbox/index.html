@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="form">
+        <p>Выберите товары:</p>
+        <div class="form_element">
+            <input type="checkbox" name="el1" id="check_1" class = "form_checkbox" value = "120">
+            <label for="el1" id = "label_1">Пирог с яблоком - <span class ="form_element_cost"></span>₽</label>
+        </div>
+        <div class="form_element">
+            <input type="checkbox" name="el2" id="check_2" class = "form_checkbox" value = "80">
+            <label for="el2" id = "label_2">Шоколадный кекс - <span class ="form_element_cost"></span>₽</label>
+        </div>
+        <div class="form_element">
+            <input type="checkbox" name="el3" id="check_3" class = "form_checkbox" value = "180">
+            <label for="el3" id = "label_3">Чискейк - <span class ="form_element_cost"></span>₽</label>
+        </div>
+        <input type="button" value="Выбрать">
+        <div id ="form_calctext">
+            <span>Общая стоимость</span>
+            <span id = "form_value">0</span>
+            ₽
+        </div>
+    </div>
+</body>
+</html>
