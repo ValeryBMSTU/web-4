@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+</head>
+<body>
+
+    <h1>Оформление заказа</h1>
+
+    <!-- Поля ввода для Фамилии и Имени -->
+    <label for="lastName">Фамилия:</label>
+    <input type="text" id="lastName" placeholder="Введите фамилию"><br><br>
+
+    <label for="firstName">Имя:</label>
+    <input type="text" id="firstName" placeholder="Введите имя"><br><br>
+
+    <!-- Список товаров -->
+    <h2>Товары:</h2>
+
+    <!-- Пример товара -->
+    <div>
+        <input type="checkbox" id="item1" class="product" data-price="150">
+        <label for="item1">Капучино (150 руб.)</label>
+        <input type="number" id="quantity1" class="quantity" min="0" value="0">
+    </div>
+
+    <div>
+        <input type="checkbox" id="item2" class="product" data-price="100">
+        <label for="item2">Эспрессо (100 руб.)</label>
+        <input type="number" id="quantity2" class="quantity" min="0" value="0">
+    </div>
+
+    <div>
+        <input type="checkbox" id="item3" class="product" data-price="200">
+        <label for="item3">Латте (200 руб.)</label>
+        <input type="number" id="quantity3" class="quantity" min="0" value="0">
+    </div>
+
+    <!-- Общая сумма -->
+    <h3>Итого: <span id="totalPrice">0</span> руб.</h3>
+
+    <!-- Кнопка для оформления заказа -->
+    <button id="orderBtn">Оформить заказ</button>
+
+    <script src="main.js"></script>
+</body>
+</html>

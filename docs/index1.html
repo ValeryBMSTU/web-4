@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+    <script defer src="main.js"></script>
+    
+</head>
+<body>
+    <form id="productForm">
+        <h1>выберите товары</h1>
+
+        
+        <input type="checkbox" id="first" name="food" value="100">
+        <label for="first">Товар 1 (100 рублей)</label>
+
+        <input type="checkbox" id="second" name="food" value="150">
+        <label for="second">Товар 2 (150 рублей)</label>
+        <input type="checkbox" id="third" name="food" value="180">
+        <label for="third">Товар 3 (180 рублей)</label>
+
+        <button type="button" id="Btn">выбрать</button>
+
+    </form>
+    <h2>Общая стоимость: <span id="totalCost">0</span> руб.</h2>
+
+    <script src="main.js"></script>
+</body>
+</html>
