@@ -1,0 +1,20 @@
+.text{
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+}
+.form{
+    display: flex;
+    justify-content: left;
+}
+button{
+    display: flex;
+    justify-content: left;
+}
+.rez{
+    display: flex;
+    justify-content: left;
+}
