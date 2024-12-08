@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Order</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1>Coffee House</h1>
+    
+
+    <div class="name-inputs">
+
+        <input type="text" id="first-name" placeholder="input name">
+
+
+        <input type="text" id="last-name" placeholder="input last naem">
+    </div>
+
+    <div class="item-container">
+        <div class="item">
+            <input type="checkbox" id="item1" value="50">
+            <label for="item1">Warter - 50p</label>
+            <input type="number" id="qty1" value="0" min="0">
+        </div>
+        <div class="item">
+            <input type="checkbox" id="item2" value="30">
+            <label for="item2">Latte - 30p</label>
+            <input type="number" id="qty2" value="0" min="0">
+        </div>
+        <div class="item">
+            <input type="checkbox" id="item3" value="40">
+            <label for="item3">Apple cok - 40p</label>
+            <input type="number" id="qty3" value="0" min="0">
+        </div>
+        <div class="item">
+            <input type="checkbox" id="item4" value="400">
+            <label for="item4">Golden - 400p</label>
+            <input type="number" id="qty4" value="0" min="0">
+        </div>
+    </div>
+
+    <div>
+        <strong>Total：<span id="total">0</span>p</strong>
+    </div>
+
+    <button onclick="submitOrder()">pay</button>
+
+    <script src="main.js"></script> 
+</body>
+</html>

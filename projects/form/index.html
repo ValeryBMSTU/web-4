@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .greeting {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pls input your first name and your last name</h1>
+
+    <label for="first-name">Name:</label>
+    <input type="text" id="first-name" placeholder="Pls type your name"><br><br>
+
+    <label for="last-name">Famliy name:</label>
+    <input type="text" id="last-name" placeholder="Pls type your last name"><br><br>
+
+    <button onclick="greet()">Submite</button>
+
+    <div class="greeting" id="greeting-message"></div>
+
+    <script>
+        function greet() {
+            const firstName = document.getElementById("first-name").value;
+            const lastName = document.getElementById("last-name").value;
+
+            if (firstName && lastName) {
+                document.getElementById("greeting-message").textContent = `Greeting see you, ${firstName} ${lastName}！`;
+            } else {
+                document.getElementById("greeting-message").textContent = "Pls input full name, cannot be empty!";
+            }
+        }
+    </script>
+
+</body>
+</html>

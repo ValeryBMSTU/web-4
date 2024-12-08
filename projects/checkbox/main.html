@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose your itmes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .item {
+            margin-bottom: 10px;
+        }
+
+        #total-price {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Выберите товары</h1>
+    <form id="product-form">
+        <div class="item">
+            <label>
+                <input type="checkbox" name="food" value="100"> Cake - 100 руб
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <input type="checkbox" name="food" value="55"> Water - 55 руб
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <input type="checkbox" name="food" value="299"> Borsh - 299 руб
+            </label>
+        </div>
+        <button type="button" onclick="calculateTotal()">Выбрать</button>
+    </form>
+
+    <div id="total-price">Общая стоимость: 0 руб</div>
+
+    <script>
+        function calculateTotal() {
+            let totalPrice = 0;
+            const checkboxes = document.querySelectorAll('input[name="food"]:checked');
+
+            checkboxes.forEach(function(checkbox) {
+                totalPrice += parseInt(checkbox.value);
+            });
+
+            document.getElementById('total-price').textContent = `Общая стоимость: ${totalPrice} руб`;
+        }
+    </script>
+</body>
+</html>
